@@ -37,7 +37,14 @@ const ui = {
     },
 
     async cancelarPensamento() {
-        console.log("Cancelar Pensamento")
+        const pensamentoConteudo = document.getElementById("pensamento-conteudo")
+        const pensamentoAutoria = document.getElementById("pensamento-autoria")
+        pensamentoConteudo.value = ""
+        pensamentoAutoria.value = ""
+    },
+
+    async limparFormulario() {
+        document.getElementById("pensamento-form").reset()
     }
 }
 
